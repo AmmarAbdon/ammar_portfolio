@@ -159,7 +159,9 @@ nav .container {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding: 120px 0 60px 0;
     display: flex;
     align-items: center;
     position: relative;
@@ -596,15 +598,15 @@ nav .container {
     }
 
     .hero-img .img-wrapper {
-        width: 280px;
-        height: 360px;
+        width: 300px;
+        height: 420px; /* Taller to fit face and body */
         transform: none;
     }
 
     .hero-img .img-wrapper img {
         width: 100%;
         height: 100%;
-        object-position: center 5%; /* Even higher focus */
+        object-position: 50% 0%; /* Peak at the top */
     }
 
     .hero-img:hover .img-wrapper {
