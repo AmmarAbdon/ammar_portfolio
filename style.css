@@ -238,14 +238,16 @@ nav .container {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 40%; /* More aggressive crop to force visibility */
-    transition: transform 0.8s ease;
-    will-change: transform;
+    object-position: center 50%; /* Centered crop to remove more from top */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(0.9) contrast(1.1);
+    will-change: transform, filter;
     backface-visibility: hidden;
 }
 
 .hero-img:hover .img-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.2); /* Enhanced zoom */
+    filter: brightness(1.1) contrast(1.2); /* "Focus" effect */
 }
 
 @keyframes rotate {
@@ -596,7 +598,7 @@ nav .container {
     .hero-img .img-wrapper {
         width: 100%;
         max-width: 320px;
-        height: auto; /* Let it grow to fit the whole image */
+        height: 400px; /* Locked height to force cropping */
         transform: none;
         box-shadow: 0 30px 60px rgba(0,0,0,0.5), 
                     0 0 20px var(--primary-glow);
@@ -604,10 +606,10 @@ nav .container {
 
     .hero-img .img-wrapper img {
         width: 100%;
-        height: auto;
+        height: 100%; /* Fill the 400px container */
         display: block;
         object-fit: cover;
-        object-position: center 40%;
+        object-position: center 50%;
     }
 
     .hero-img:hover .img-wrapper {
