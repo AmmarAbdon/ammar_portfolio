@@ -604,7 +604,7 @@ nav .container {
     .hero-img .img-wrapper img {
         width: 100%;
         height: 100%;
-        object-position: center 25%;
+        object-position: center top;
     }
 
     .hero-img:hover .img-wrapper {
@@ -721,8 +721,13 @@ nav .container {
         border-radius: 15px;
     }
 
-    .badge-1 { left: -20px; top: 10%; }
-    .badge-2 { right: -20px; bottom: 10%; }
+    .badge-1 { left: -10px; top: 5%; transform: scale(0.85); }
+    .badge-2 { right: -10px; bottom: 5%; transform: scale(0.85); }
+    
+    .floating-badge i {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 480px) {
