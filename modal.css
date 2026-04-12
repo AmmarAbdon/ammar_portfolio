@@ -90,6 +90,9 @@
         padding: 2rem;
         margin: 10% auto;
     }
+    .modal-header h2 {
+        font-size: 1.8rem;
+    }
     .modal-detail-grid {
         grid-template-columns: 1fr;
     }

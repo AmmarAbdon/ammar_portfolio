@@ -20,7 +20,7 @@
     <nav>
         <div class="container">
             <a href="#" class="logo">
-                <img src="profile.jpg" alt="Ammar" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; object-position: center 35%; border: 1.5px solid var(--primary); margin-right: 10px;">
+                <img src="profile.jpg" alt="Ammar" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; object-position: center 30%; border: 1.5px solid var(--primary); margin-right: 10px;">
                 AMMAR<span style="color:var(--white)">.</span>
             </a>
             <div class="nav-links">
@@ -28,10 +28,17 @@
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
-                <a href="https://github.com/AmmarAbdon" target="_blank" style="color: var(--text-dim);"><i data-lucide="github" style="width: 20px;"></i></a>
-                <a href="https://www.linkedin.com/in/amar-abdoun-348b8b392" target="_blank" style="color: var(--text-dim);"><i data-lucide="linkedin" style="width: 20px;"></i></a>
+                <div class="social-icons-nav">
+                    <a href="https://github.com/AmmarAbdon" target="_blank"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/amar-abdoun-348b8b392" target="_blank"><i data-lucide="linkedin"></i></a>
+                </div>
             </div>
-            <a href="mailto:ammarabdoun30@gmail.com" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Hire Me</a>
+            <div class="nav-actions">
+                <a href="mailto:ammarabdoun30@gmail.com" class="btn btn-outline nav-hire-btn">Hire Me</a>
+                <button class="mobile-menu-toggle" id="menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -73,45 +80,45 @@
             <span>The Journey</span>
             <h2>About Me</h2>
         </div>
-        <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 3rem;">
+        <div class="about-content reveal">
+            <p class="about-text">
                 Flutter Developer specialized in building high-performance, scalable mobile and desktop applications. 
                 I have a strong focus on Clean Architecture and reliable state management using BLoC and Provider. 
                 My goal is to deliver high-quality, maintainable, and seamless cross-platform experiences that 
                 provide real value to users.
             </p>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; text-align: left; margin: 4rem 0;">
-                <div>
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="graduation-cap"></i> Education</h3>
-                    <div style="border-left: 2px solid var(--glass-border); padding-left: 1.5rem;">
-                        <h4 style="font-size: 1.1rem;">B.Sc. in Computer Science</h4>
-                        <p style="color: var(--primary); font-size: 0.9rem;">Benha University | 2020 - 2024</p>
-                        <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.4rem;">Cumulative GPA: 2.94 (Good). Focus on Mobile Dev.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3 class="edu-title"><i data-lucide="graduation-cap"></i> Education</h3>
+                    <div class="about-card-content">
+                        <h4>B.Sc. in Computer Science</h4>
+                        <p class="institution">Benha University | 2020 - 2024</p>
+                        <p class="gpa">Cumulative GPA: 2.94 (Good). Focus on Mobile Dev.</p>
                     </div>
                 </div>
-                <div>
-                    <h3 style="color: var(--accent-warm); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="briefcase"></i> Experience</h3>
-                    <div style="border-left: 2px solid var(--glass-border); padding-left: 1.5rem;">
-                        <h4 style="font-size: 1.1rem;">Flutter Developer Trainee</h4>
-                        <p style="color: var(--accent-warm); font-size: 0.9rem;">DEPI | Apr 2024 - Oct 2024</p>
-                        <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.4rem;">Mobile development track focused on Clean Architecture.</p>
+                <div class="about-card">
+                    <h3 class="exp-title"><i data-lucide="briefcase"></i> Experience</h3>
+                    <div class="about-card-content">
+                        <h4>Flutter Developer Trainee</h4>
+                        <p class="exp-date">DEPI | Apr 2024 - Oct 2024</p>
+                        <p class="exp-desc">Mobile development track focused on Clean Architecture.</p>
                     </div>
                 </div>
             </div>
             
-            <div style="display: flex; justify-content: center; gap: 4rem; margin-top: 2rem;">
-                <div>
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">3+</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Projects</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Projects</p>
                 </div>
-                <div>
-                    <h3 style="font-size: 2.5rem; color: var(--accent-warm);">100%</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Dedication</p>
+                <div class="stat-item">
+                    <h3 class="warm-text">100%</h3>
+                    <p>Dedication</p>
                 </div>
-                <div>
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">24/7</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Learner</p>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Learner</p>
                 </div>
             </div>
         </div>

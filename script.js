@@ -119,6 +119,33 @@ revealElements.forEach(element => {
     revealObserver.observe(element);
 });
 
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const menuIcon = menuToggle.querySelector('i');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const isActive = navLinks.classList.contains('active');
+    
+    // Toggle icon between menu and x
+    if (isActive) {
+        menuIcon.setAttribute('data-lucide', 'x');
+    } else {
+        menuIcon.setAttribute('data-lucide', 'menu');
+    }
+    lucide.createIcons();
+});
+
+// Close Mobile Menu on Link Click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+    });
+});
+
 // Navbar Background Change on Scroll
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
