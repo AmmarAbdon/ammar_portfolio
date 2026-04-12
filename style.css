@@ -237,8 +237,8 @@ nav .container {
 .hero-img .img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Changed to cover to fit the shape */
-    object-position: top center; /* Cropped from the top to show the face */
+    object-fit: cover;
+    object-position: center 20%; /* Cropped more from the top */
     transition: transform 0.8s ease;
     will-change: transform;
     backface-visibility: hidden;
@@ -606,8 +606,8 @@ nav .container {
         width: 100%;
         height: auto;
         display: block;
-        object-fit: cover; /* Changed to cover to fit the shape */
-        object-position: top center;
+        object-fit: cover;
+        object-position: center 20%;
     }
 
     .hero-img:hover .img-wrapper {
