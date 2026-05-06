@@ -40,16 +40,22 @@ const projects = {
         tech: 'Designed as a high-performance desktop system using Clean Architecture and BLoC. Optimized for efficiency with custom Flutter animations.'
     },
     'agro': {
-        title: 'AGRO — AI Project',
-        tags: ['Flutter', 'TFLite', 'Supabase', 'Clean Arch', 'Animation'],
+        title: 'AGRO — AI Plant Detector',
+        tags: ['Flutter', 'TensorFlow Lite', 'Supabase', 'Clean Arch'],
         features: [
-            'Real-time plant disease detection with AI',
-            'Backend integration using Supabase',
-            'Architected with strict Clean Architecture',
-            'Fluid UI transitions and scan animations',
-            'On-device TFLite inference for speed'
+            'On-device Disease Classification using TFLite',
+            'Real-time Camera Diagnosis & Image History',
+            'Automated Treatment Recommendations with Voice Support',
+            'Multi-language Support (Arabic/English)',
+            'Profile Management & Cloud Sync with Supabase'
         ],
-        tech: 'Integrated TFLite for local AI capabilities while leveraging Supabase for cloud data. Follows rigorous clean code standards.'
+        tech: 'Built with Flutter for high performance, leveraging TFLite for lightning-fast on-device ML without internet. Uses Clean Architecture (Data/Domain/Presentation) for maximum scalability.',
+        link: 'https://github.com/AmmarAbdon/Agro',
+        gallery: [
+            'plant.png',
+            'https://raw.githubusercontent.com/AmmarAbdon/ammar_portfolio/main/agro_2.png',
+            'https://raw.githubusercontent.com/AmmarAbdon/ammar_portfolio/main/agro_3.png'
+        ]
     },
     'techzone': {
         title: 'TechZone Marketplace',
@@ -73,29 +79,50 @@ function openProject(key) {
     const project = projects[key];
     if (!project) return;
 
+    // Add gallery if available
+    let galleryHtml = '';
+    if (project.gallery) {
+        galleryHtml = `
+            <div class="project-gallery">
+                ${project.gallery.map(img => `<img src="${img}" alt="Screenshot" class="gallery-img">`).join('')}
+            </div>
+        `;
+    }
+
     modalBody.innerHTML = `
         <div class="modal-header">
             <h2>${project.title}</h2>
-            <div class="tags">
+            <div class="project-tags">
                 ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
             </div>
         </div>
-        <div class="modal-detail-grid">
-            <div class="modal-detail-item">
-                <h4>Key Features</h4>
+        
+        ${galleryHtml}
+        
+        <div class="modal-info">
+            <div class="modal-desc">
+                <h3>About Project</h3>
+                <p>${project.tech}</p>
+            </div>
+            
+            <div class="modal-features">
+                <h3>Key Features</h3>
                 <ul>
-                    ${project.features.map(f => `<li>${f}</li>`).join('')}
+                    ${project.features.map(f => `<li><i data-lucide="check-circle-2"></i> ${f}</li>`).join('')}
                 </ul>
             </div>
-            <div class="modal-detail-item">
-                <h4>Technical Deep Dive</h4>
-                <p style="color: var(--text-dim); line-height: 1.8;">${project.tech}</p>
-            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <a href="${project.link}" target="_blank" class="btn btn-primary">
+                View Source Code <i data-lucide="github"></i>
+            </a>
         </div>
     `;
 
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden'; // Prevent scroll
+    lucide.createIcons();
 }
 
 // Close Modal
