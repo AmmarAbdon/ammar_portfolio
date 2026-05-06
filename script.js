@@ -1,8 +1,51 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
+// Custom Cursor Logic
+const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+const links = document.querySelectorAll('a, button, .project-card, .skill-card');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+    follower.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+});
+
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        follower.classList.add('active');
+        cursor.style.transform += ' scale(2)';
+    });
+    link.addEventListener('mouseleave', () => {
+        follower.classList.remove('active');
+        cursor.style.transform = cursor.style.transform.replace(' scale(2)', '');
+    });
+});
+
+// Parallax Hero Effect
+document.addEventListener('mousemove', (e) => {
+    const moveX = (e.clientX - window.innerWidth / 2) / 50;
+    const moveY = (e.clientY - window.innerHeight / 2) / 50;
+    const heroImg = document.querySelector('.hero-img');
+    if (heroImg) {
+        heroImg.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    }
+});
+
 // Project Data
 const projects = {
+    'taskora': {
+        title: 'Taskora — Task Management',
+        tags: ['Flutter', 'BLoC', 'Clean Arch', 'CI/CD', 'Testing'],
+        features: [
+            'Multi-store distribution (Amazon, Aptoide, F-Droid)',
+            '75%+ Test Coverage (Unit, Widget, Integration)',
+            'Automated CI/CD release pipeline',
+            'Advanced BLoC state management',
+            'Modern, responsive UI with fluid animations'
+        ],
+        tech: 'A production-grade task management system built with a focus on scalability and reliability. Implements Clean Architecture, BLoC, and a comprehensive testing suite following the AAA pattern. Features a fully automated CI/CD pipeline for multi-platform distribution.'
+    },
     'badr': {
         title: 'BADR System (Desktop)',
         tags: ['Flutter', 'SQLite', 'BLoC', 'Clean Arch', 'Desktop', 'Animation'],
