@@ -17,15 +17,21 @@ if (!('ontouchstart' in window)) {
 const projects = {
     'taskora': {
         title: 'Taskora — Task Management',
-        tags: ['Flutter', 'BLoC', 'Clean Arch', 'CI/CD', 'Testing'],
+        tags: ['Flutter', 'BLoC', 'Clean Arch', 'Firebase'],
         features: [
-            'Multi-store distribution (Amazon, Aptoide, F-Droid)',
-            '75%+ Test Coverage (Unit, Widget, Integration)',
-            'Automated CI/CD release pipeline',
-            'Advanced BLoC state management',
-            'Modern, responsive UI with fluid animations'
+            'Advanced Task Scheduling & Reminders',
+            'State-of-the-art BLoC State Management',
+            'Full Offline Support with local caching',
+            'Automated CI/CD Pipeline for app stores',
+            '75%+ Test Coverage (Unit & Widget tests)'
         ],
-        tech: 'A production-grade task management system built with a focus on scalability and reliability. Implements Clean Architecture, BLoC, and a comprehensive testing suite following the AAA pattern. Features a fully automated CI/CD pipeline for multi-platform distribution.'
+        tech: 'A high-performance productivity tool built with Flutter. It follows rigorous Clean Architecture and SOLID principles, ensuring high maintainability and testability.',
+        link: 'https://github.com/AmmarAbdon/taskora',
+        gallery: [
+            'taskora_1.png',
+            'taskora_2.png',
+            'taskora_3.png'
+        ]
     },
     'badr': {
         title: 'BADR System (Desktop)',

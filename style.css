@@ -473,7 +473,6 @@ nav .container {
 /* Stacked Image Effect (Premium Version) */
 .project-img-stack {
     height: 300px;
-    background: radial-gradient(circle at center, #0a1a0a 0%, #050505 100%);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -488,10 +487,27 @@ nav .container {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: var(--primary);
     filter: blur(80px);
     opacity: 0.1;
     z-index: 0;
+}
+
+.project-agro .project-img-stack {
+    background: radial-gradient(circle at center, #0a1a0a 0%, #050505 100%);
+}
+}
+
+.project-agro .project-img-stack::before {
+    background: #3ecf8e;
+}
+
+.project-taskora .project-img-stack {
+    background: radial-gradient(circle at center, #0a0a1a 0%, #050505 100%);
+}
+
+.project-taskora .project-img-stack::before {
+    background: #7000ff;
+    opacity: 0.2;
 }
 
 .stack-img {
