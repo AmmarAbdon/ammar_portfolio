@@ -1,36 +1,17 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
-// Custom Cursor Logic
-const cursor = document.querySelector('.cursor');
-const follower = document.querySelector('.cursor-follower');
-const links = document.querySelectorAll('a, button, .project-card, .skill-card');
-
-document.addEventListener('mousemove', (e) => {
-    cursor.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
-    follower.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
-});
-
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        follower.classList.add('active');
-        cursor.style.transform += ' scale(2)';
+// Parallax Hero Effect (Disabled on touch devices for better mobile experience)
+if (!('ontouchstart' in window)) {
+    document.addEventListener('mousemove', (e) => {
+        const moveX = (e.clientX - window.innerWidth / 2) / 50;
+        const moveY = (e.clientY - window.innerHeight / 2) / 50;
+        const heroImg = document.querySelector('.hero-img');
+        if (heroImg) {
+            heroImg.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        }
     });
-    link.addEventListener('mouseleave', () => {
-        follower.classList.remove('active');
-        cursor.style.transform = cursor.style.transform.replace(' scale(2)', '');
-    });
-});
-
-// Parallax Hero Effect
-document.addEventListener('mousemove', (e) => {
-    const moveX = (e.clientX - window.innerWidth / 2) / 50;
-    const moveY = (e.clientY - window.innerHeight / 2) / 50;
-    const heroImg = document.querySelector('.hero-img');
-    if (heroImg) {
-        heroImg.style.transform = `translate(${moveX}px, ${moveY}px)`;
-    }
-});
+}
 
 // Project Data
 const projects = {

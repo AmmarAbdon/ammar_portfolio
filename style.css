@@ -36,35 +36,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
-}
-
-/* Custom Cursor */
-.cursor {
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-}
-
-.cursor-follower {
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--primary-glow);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transition: transform 0.15s ease-out, background 0.3s ease;
-}
-
-.cursor-follower.active {
-    background: var(--primary-glow);
-    transform: scale(1.5);
+    cursor: default;
 }
 
 /* Background Animation */
@@ -942,9 +914,15 @@ nav .container {
     .badge-1 { left: -10px; top: 10%; transform: scale(0.8); }
     .badge-2 { right: -10px; bottom: 10%; transform: scale(0.8); }
     
-    .floating-badge i {
-        width: 30px;
-        height: 30px;
+    .marquee-content span {
+        font-size: 1.8rem;
+        margin: 0 1.5rem;
+    }
+
+    .blob {
+        width: 300px;
+        height: 300px;
+        filter: blur(60px);
     }
 }
 
