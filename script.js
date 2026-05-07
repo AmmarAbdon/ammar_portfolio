@@ -35,15 +35,21 @@ const projects = {
     },
     'badr': {
         title: 'BADR System (Desktop)',
-        tags: ['Flutter', 'SQLite', 'BLoC', 'Clean Arch', 'Desktop', 'Animation'],
+        tags: ['Flutter', 'SQLite', 'BLoC', 'Desktop'],
         features: [
-            'Enterprise-ready Desktop application',
-            'Advanced inventory and warehouse tracking',
-            'Full accounting suite and staff management',
-            'Complex UI animations for smooth UX',
-            'Secure local database with SQLite'
+            'Advanced Inventory & Warehouse Control',
+            'Comprehensive Sales & Returns Management',
+            'Real-time Financial Tracking (Safe/Cashier)',
+            'Detailed Accounting & Staff Reporting',
+            'Secure Local Storage with SQLite Database'
         ],
-        tech: 'Designed as a high-performance desktop system using Clean Architecture and BLoC. Optimized for efficiency with custom Flutter animations.'
+        tech: 'A robust enterprise desktop solution built with Flutter for Windows. It implements complex business logic using BLoC and ensures data integrity with SQLite. Designed with a clean, high-efficiency dashboard for rapid management.',
+        link: 'https://github.com/AmmarAbdon/badr_system',
+        gallery: [
+            'badr_1.png',
+            'badr_2.png',
+            'badr_3.png'
+        ]
     },
     'agro': {
         title: 'AGRO — AI Plant Detector',

@@ -509,6 +509,15 @@ nav .container {
     opacity: 0.2;
 }
 
+.project-badr .project-img-stack {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #050505 100%);
+}
+
+.project-badr .project-img-stack::before {
+    background: #ff8c00;
+    opacity: 0.15;
+}
+
 .project-techzone .project-img-stack {
     background: radial-gradient(circle at center, #0a1525 0%, #050505 100%);
 }
