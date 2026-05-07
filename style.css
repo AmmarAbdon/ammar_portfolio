@@ -518,6 +518,98 @@ nav .container {
     opacity: 0.15;
 }
 
+/* Revamped Desktop Monitor Style */
+.badr-desktop-wrapper {
+    perspective: 1500px !important;
+}
+
+.desktop-monitor {
+    position: relative;
+    width: 240px;
+    height: 160px;
+    background: #1a1a1a;
+    border: 6px solid #2a2a2a;
+    border-radius: 12px;
+    z-index: 5;
+    transform: translateZ(50px) rotateX(5deg);
+    transition: var(--transition);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.monitor-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #000;
+}
+
+.monitor-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.monitor-base {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 16px;
+    background: #2a2a2a;
+    border-radius: 4px 4px 0 0;
+}
+
+.monitor-base::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+.desktop-stack-img {
+    position: absolute;
+    height: 130px;
+    width: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    opacity: 0.5;
+}
+
+.img-left {
+    z-index: 4;
+    transform: translateX(-100px) translateZ(0) rotateY(25deg) scale(0.9);
+}
+
+.img-right {
+    z-index: 4;
+    transform: translateX(100px) translateZ(0) rotateY(-25deg) scale(0.9);
+}
+
+/* Hover Effects */
+.project-badr:hover .desktop-monitor {
+    transform: translateZ(80px) translateY(-10px) rotateX(0deg);
+    border-color: var(--primary);
+}
+
+.project-badr:hover .img-left {
+    transform: translateX(-150px) translateZ(20px) rotateY(35deg) scale(0.95);
+    opacity: 0.8;
+}
+
+.project-badr:hover .img-right {
+    transform: translateX(150px) translateZ(20px) rotateY(-35deg) scale(0.95);
+    opacity: 0.8;
+}
+
 .project-techzone .project-img-stack {
     background: radial-gradient(circle at center, #0a1525 0%, #050505 100%);
 }
