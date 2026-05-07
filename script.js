@@ -102,8 +102,20 @@ function openProject(key) {
     let galleryHtml = '';
     if (project.gallery) {
         galleryHtml = `
-            <div class="project-gallery">
-                ${project.gallery.map(img => `<img src="${img}" alt="Screenshot" class="gallery-img">`).join('')}
+            <div class="project-gallery ${key === 'badr' ? 'desktop-gallery' : ''}">
+                ${project.gallery.map(img => {
+                    if (key === 'badr') {
+                        return `
+                            <div class="modal-monitor">
+                                <div class="monitor-screen">
+                                    <img src="${img}" alt="Screenshot">
+                                </div>
+                                <div class="monitor-base"></div>
+                            </div>
+                        `;
+                    }
+                    return `<img src="${img}" alt="Screenshot" class="gallery-img">`;
+                }).join('')}
             </div>
         `;
     }
