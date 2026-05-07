@@ -65,15 +65,22 @@ const projects = {
     },
     'techzone': {
         title: 'TechZone Marketplace',
-        tags: ['Flutter', 'Supabase', 'OneSignal', 'Provider', 'Animation'],
+        tags: ['Flutter', 'Supabase', 'OneSignal', 'Provider'],
         features: [
             'Robust marketplace app with Provider state mgmt',
+            'Advanced Search with Category Filtering',
             'Real-time backend & Edge Functions with Supabase',
             'System-level push notifications using OneSignal',
             'User profiles and secure purchase flows',
             'State-of-the-art Flutter hero animations'
         ],
-        tech: 'A marketplace demonstration of scalable state management with Provider and real-time backend persistence with Supabase. Integrated OneSignal for reliable device-to-user push notifications.'
+        tech: 'A high-performance marketplace app built with Flutter and Supabase. Features a clean UI with advanced search, user profiles, and real-time notifications.',
+        link: 'https://github.com/AmmarAbdon/TechZone',
+        gallery: [
+            'techzone_1.png',
+            'techzone_2.png',
+            'techzone_3.png'
+        ]
     }
 };
 

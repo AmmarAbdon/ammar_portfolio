@@ -495,7 +495,6 @@ nav .container {
 .project-agro .project-img-stack {
     background: radial-gradient(circle at center, #0a1a0a 0%, #050505 100%);
 }
-}
 
 .project-agro .project-img-stack::before {
     background: #3ecf8e;
@@ -508,6 +507,15 @@ nav .container {
 .project-taskora .project-img-stack::before {
     background: #7000ff;
     opacity: 0.2;
+}
+
+.project-techzone .project-img-stack {
+    background: radial-gradient(circle at center, #0a1525 0%, #050505 100%);
+}
+
+.project-techzone .project-img-stack::before {
+    background: var(--primary);
+    opacity: 0.15;
 }
 
 .stack-img {
