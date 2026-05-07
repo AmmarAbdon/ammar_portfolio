@@ -525,13 +525,13 @@ nav .container {
 
 .desktop-monitor {
     position: relative;
-    width: 240px;
-    height: 160px;
+    width: 220px;
+    height: 140px;
     background: #1a1a1a;
     border: 6px solid #2a2a2a;
     border-radius: 12px;
-    z-index: 5;
-    transform: translateZ(50px) rotateX(5deg);
+    z-index: 10; /* Top of pyramid */
+    transform: translateZ(60px) translateY(-20px) rotateX(5deg);
     transition: var(--transition);
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 }
@@ -555,7 +555,7 @@ nav .container {
     bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 40px;
     height: 16px;
     background: #2a2a2a;
     border-radius: 4px 4px 0 0;
@@ -567,7 +567,7 @@ nav .container {
     bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90px;
+    width: 70px;
     height: 8px;
     background: #1a1a1a;
     border-radius: 10px;
@@ -575,39 +575,39 @@ nav .container {
 
 .desktop-stack-img {
     position: absolute;
-    height: 130px;
+    height: 120px;
     width: auto;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.1);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .img-left {
-    z-index: 4;
-    transform: translateX(-100px) translateZ(0) rotateY(25deg) scale(0.9);
+    z-index: 5;
+    transform: translateX(-90px) translateY(40px) translateZ(0) rotateY(20deg) scale(0.9);
 }
 
 .img-right {
-    z-index: 4;
-    transform: translateX(100px) translateZ(0) rotateY(-25deg) scale(0.9);
+    z-index: 5;
+    transform: translateX(90px) translateY(40px) translateZ(0) rotateY(-20deg) scale(0.9);
 }
 
-/* Hover Effects */
+/* Hover Effects - Pyramid Expansion */
 .project-badr:hover .desktop-monitor {
-    transform: translateZ(80px) translateY(-10px) rotateX(0deg);
+    transform: translateZ(100px) translateY(-40px) rotateX(0deg);
     border-color: var(--primary);
 }
 
 .project-badr:hover .img-left {
-    transform: translateX(-150px) translateZ(20px) rotateY(35deg) scale(0.95);
-    opacity: 0.8;
+    transform: translateX(-140px) translateY(60px) translateZ(30px) rotateY(30deg) scale(1);
+    opacity: 0.9;
 }
 
 .project-badr:hover .img-right {
-    transform: translateX(150px) translateZ(20px) rotateY(-35deg) scale(0.95);
-    opacity: 0.8;
+    transform: translateX(140px) translateY(60px) translateZ(30px) rotateY(-30deg) scale(1);
+    opacity: 0.9;
 }
 
 .project-techzone .project-img-stack {
