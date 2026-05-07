@@ -682,8 +682,11 @@ nav .container {
 }
 
 .project-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reduced from 1.5rem to fit on one line */
     margin-bottom: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project-content p {
