@@ -525,6 +525,8 @@ nav .container {
 
 .desktop-monitor {
     position: absolute;
+    width: 190px;
+    height: 120px;
     background: #1a1a1a;
     border: 5px solid #2a2a2a;
     border-radius: 10px;
@@ -535,26 +537,22 @@ nav .container {
 }
 
 .monitor-main {
-    width: 210px;
-    height: 130px;
     z-index: 10;
     transform: translateZ(60px) translateY(-30px) rotateX(5deg);
     border-width: 6px;
 }
 
 .monitor-side {
-    width: 160px;
-    height: 100px;
     z-index: 5;
     opacity: 0.6;
 }
 
 .monitor-left {
-    transform: translateX(-100px) translateY(30px) rotateY(20deg) scale(0.9);
+    transform: translateX(-100px) translateY(30px) rotateY(20deg);
 }
 
 .monitor-right {
-    transform: translateX(100px) translateY(30px) rotateY(-20deg) scale(0.9);
+    transform: translateX(100px) translateY(30px) rotateY(-20deg);
 }
 
 .monitor-screen {
